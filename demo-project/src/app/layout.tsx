@@ -14,7 +14,7 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "TangibleFi",
+  title: "TangibleFi", 
   description:
     "TangibleFi: A comprehensive dashboard for managing tokenized real-world assets and lending activities across multiple blockchains",
 };

@@ -13,7 +13,7 @@ export default function NavigationDemo() {
     navigateWithLoading(href, 1000); // 1 second loading animation
   };
 
-  return (
+  return ( 
     <>
       <div className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border border-blue-200">
         <div className="flex items-center gap-2 text-blue-700">
