@@ -9,16 +9,12 @@ import {
   CheckCircle,
   ArrowRight,
   Users,
-  Globe,
   Zap,
   FileCheck,
   Database,
   Network,
-  TrendingUp,
   Sparkles,
   ShieldCheck,
-  Key,
-  Fingerprint,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,7 +27,7 @@ import {
 import { Footer } from "@/components/footer";
 
 // Custom hook for scroll-based animations
-function useScrollAnimation(threshold = 0.1) {
+function useScrollAnimation(threshold: number = 0.1) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -75,7 +71,7 @@ function AnimatedCounter({
 }) {
   const [currentValue, setCurrentValue] = useState(0);
   const [ref, isVisible] = useScrollAnimation(0.2);
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -160,7 +156,6 @@ function AnimatedText({
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [heroRef, heroVisible] = useScrollAnimation(0.1);
   const [featuresRef, featuresVisible] = useScrollAnimation(0.1);
   const [howItWorksRef, howItWorksVisible] = useScrollAnimation(0.1);
   const [statsRef, statsVisible] = useScrollAnimation(0.1);
